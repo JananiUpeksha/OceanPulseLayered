@@ -13,10 +13,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.Appinitializer;
 import lk.ijse.BO.BOFactory;
-import lk.ijse.BO.DriverBO;
+import lk.ijse.BO.custom.DriverBO;
 import lk.ijse.dto.DriverDto;
 import lk.ijse.dto.tm.DriverTm;
-import lk.ijse.DAO.DriverDAOimpl;
+import lk.ijse.DAO.custom.impl.DriverDAOimpl;
 
 import java.io.IOException;
 import java.sql.SQLException;

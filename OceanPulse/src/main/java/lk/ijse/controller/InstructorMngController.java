@@ -12,11 +12,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.BO.BOFactory;
-import lk.ijse.BO.InstructorBO;
-import lk.ijse.BO.ItemBO;
+import lk.ijse.BO.custom.InstructorBO;
 import lk.ijse.dto.InsructorDto;
 import lk.ijse.dto.tm.InstructorTm;
-import lk.ijse.DAO.InstructorDAOimpl;
+import lk.ijse.DAO.custom.impl.InstructorDAOimpl;
 
 import java.io.IOException;
 import java.sql.SQLException;

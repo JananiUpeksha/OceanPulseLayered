@@ -1,5 +1,7 @@
 package lk.ijse.DAO;
 
+import lk.ijse.DAO.custom.impl.*;
+
 public class DAOFactory {
     private static DAOFactory daoFactory;
     private DAOFactory(){}
@@ -7,7 +9,7 @@ public class DAOFactory {
         return daoFactory == null? daoFactory = new DAOFactory() : daoFactory;
     }
     public enum DAOTypes{
-        BOAT,DRIVER,INSTRUCTOR,EMPLOYEE,CUSTOMER,ITEM,SHEDULE,RESERVATION,ORDERS,ORDER_DETAILS
+        BOAT,DRIVER,INSTRUCTOR,EMPLOYEE,CUSTOMER,ITEM,SHEDULE,RESERVATION,ORDERS
     }
     public static SuperDAO getDAO(DAOTypes daoTypes){
         switch (daoTypes){

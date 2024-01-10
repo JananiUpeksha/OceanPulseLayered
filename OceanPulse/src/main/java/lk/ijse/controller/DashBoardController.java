@@ -16,7 +16,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import lk.ijse.Appinitializer;
-import lk.ijse.DAO.DashboardDAOimpl;
+import lk.ijse.BO.custom.DashboardBO;
+import lk.ijse.BO.custom.impl.DashboardBOimpl;
+import lk.ijse.DAO.custom.impl.DashboardDAOimpl;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -53,6 +55,8 @@ public class DashBoardController {
 
     @FXML
     private Button staffbtn;
+    DashboardDAOimpl dashboardDAO = new DashboardDAOimpl();
+    DashboardBO dashboardBO = new DashboardBOimpl();
 
     public void customerOnAction(ActionEvent actionEvent) throws IOException {
         Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/customerMng.fxml"));
@@ -120,14 +124,14 @@ public class DashBoardController {
         Stage.show();
     }
 
-    public void initialize() throws SQLException {
+    public void initialize() throws SQLException, ClassNotFoundException {
         displayScheduleDistributionChart();
         loadDateTime();
         setName();
     }
 
-    private void setName() throws SQLException {
-        String lastCustomerName = DashboardDAOimpl.getLastCustomerNameFromDatabase();
+    private void setName() throws SQLException, ClassNotFoundException {
+        String lastCustomerName = dashboardBO.getLastCustomerNameFromDatabase();
         lblName.setText(lastCustomerName);
     }
 
@@ -145,12 +149,12 @@ public class DashBoardController {
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
     }
-    public void displayScheduleDistributionChart() {
+    public void displayScheduleDistributionChart() throws ClassNotFoundException {
         // Fetch schedule data from your database
         // Fetch schedule data from your database
         try {
             // Fetch schedule data from your model
-            ObservableList<PieChart.Data> scheduleData = DashboardDAOimpl.getScheduleDataFromDatabase();
+            ObservableList<PieChart.Data> scheduleData = dashboardBO.getScheduleDataFromDatabase();
 
             // Create a PieChart
             PieChart pieChart = new PieChart(scheduleData);

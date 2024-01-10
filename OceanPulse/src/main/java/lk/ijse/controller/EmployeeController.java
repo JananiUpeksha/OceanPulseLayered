@@ -13,10 +13,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.Appinitializer;
 import lk.ijse.BO.BOFactory;
-import lk.ijse.BO.EmployeeBO;
+import lk.ijse.BO.custom.EmployeeBO;
 import lk.ijse.dto.EmployeeDto;
 import lk.ijse.dto.tm.EmployeeTm;
-import lk.ijse.DAO.EmployeeDAOimpl;
+import lk.ijse.DAO.custom.impl.EmployeeDAOimpl;
 import lk.ijse.entity.Employee;
 
 import java.io.IOException;

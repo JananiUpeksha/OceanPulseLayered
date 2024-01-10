@@ -13,10 +13,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.Appinitializer;
 import lk.ijse.BO.BOFactory;
-import lk.ijse.BO.CustomerBO;
+import lk.ijse.BO.custom.CustomerBO;
 import lk.ijse.dto.CustomerDto;
 import lk.ijse.dto.tm.CustomerTm;
-import lk.ijse.DAO.CustomerDAOimpl;
+import lk.ijse.DAO.custom.impl.CustomerDAOimpl;
 
 import java.io.IOException;
 import java.sql.SQLException;
