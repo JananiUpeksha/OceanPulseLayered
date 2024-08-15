@@ -1,6 +1,7 @@
 OceanPulse
 
 OceanPulse is an advanced version of a Java and JavaFX-based Point of Sale System (POSS), originally developed as a first-semester final project. This updated project has been restructured to utilize layered architecture and several design patterns to improve its scalability, maintainability, and overall design.
+
 Features
 
     Layered Architecture: The application is now organized into distinct layers, including Presentation, Business Logic, and Data Access, to enhance modularity and separation of concerns.
